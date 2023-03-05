@@ -1,36 +1,21 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Em meio a essa grande pandemia vinda nestes últimos anos, percebemos que o mundo foi obrigado à evoluir, consistindo em diversas atividades, antes realizadas presencialmente, tendo que ser totalmente reagrupadas para um trabalho a distância (HOMEOFFICE). Não somente as empresas sofreram com este novo sistema a distância, mas também escolas, faculdades, cursos em geral, tiveram que ser formatados para este novo módelo implementado mundo a fora. Com isso, trazendo para a área de ensinos, pensamos em realizar a criação de um aplicativo móvel para auxiliar a organização dos professores e alunos, com relação as diversas tarefas realizadas durante um ano, tendo assim, uma melhor forma de monitoramento e comunicação de forma mais rápida e prática.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Os maiores problemas encontrados foram à descentralização das plataformas utilizadas no ensino a distância e a dificuldade na comunicação entre alunos e professores. No caso da descentralização das plataformas, foi algo que resultou um atraso imenso durante o início da pandemia, visto que não existia uma plataforma voltada para a organização de tarefas e por outro lado, não existia uma plataforma que auxiliava facilmente o contato entre professor e aluno durante uma atividade.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Visto a dificuldade encontrada nos ensinos durante a pandemia, resolvemos criar um aplicativo móvel que consista em organizar alunos em grupos, disponibilizar o monitoramento de tarefas dos alunos para o professor e um modo de comunicação mais ágil e prática, tendo assim, uma melhor organização do que deve ser realizado durante o ano letivo (seja faculdade ou até mesmo escolas/cursos), monitoramento de avaliações realizadas pelo professor e uma comunicação objetiva e rápida, para que as dúvidas sejam sanadas com mais agilidade.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+"Amarilla (2011), acredita que o desafio está em escolher corretamente um ambiente virtual que contribua não somente a exposição de conteúdo, mas a colaboração e a interação coletivas no processo de ensino-aprendizagem."
+Fonte:https://www.nucleodoconhecimento.com.br/educacao/o-ensino#:~:text=Bento%20(2012)%20destaca%20que%20a,b%C3%A1sico%20na%20%C3%A1rea%20de%20inform%C3%A1tica.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Sendo assim, um aplicativo móvel designado para organização, interação e comunicação, traria muitos benefícios para evoluir o cenário em que o ensino a distância é encontrado nestes dias. Prentendemos facilitar as características listadas acima (organização, interação e comunicação) tornando o aplicativo mais prático, simples e intuitivo para os usuários!
 
 ## Público-Alvo
 
