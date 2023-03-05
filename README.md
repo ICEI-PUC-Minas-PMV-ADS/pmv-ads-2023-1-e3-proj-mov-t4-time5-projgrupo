@@ -1,23 +1,27 @@
-# Projeto Grupo!
+# Projeto Gruppo
 
-Análise e Desenvolvimento de Sistemas
+> **Análise e Desenvolvimento de Sistemas**
+> 
+> Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio
+> 
+> 3º Semestre / Eixo
 
-Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio
+Gruppo é um app voltado para a criação e gestão de equipes, inicialmente voltado para ambientes acadêmicos. O intuito é que seja uma plataforma simples, onde alunos podem formar grupos com outros alunos, ou fazer parte de grupos criados pelo professor.
 
-3º Semestre
-
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Nele será possível encontrar grupos, conhecer quem faz parte de seu grupo, ver prazos de tarefas, bem como acessar documentos, links e materiais externos relacionados ao grupo.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+- [Aaron Stiebler Carneiro da Silva](https://github.com/euaaron)
+- [Iago José Silva Ferreira](https://github.com/iagxferreira)
+- [Ian Amaral Barbosa Moreira](https://github.com/ian-br)
+- [Marco Túlio Félix Santiago](https://github.com/TulioFS)
+- Marcos Damas Anacleto
+- Rafael Dias Rubio
 
 ## Orientador
 
-* Nome completo do professor 1
+- [Mateus Curcino de Lima](https://github.com/mateuscurcino)
 
 ## Instruções de utilização
 
@@ -25,26 +29,24 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Documentação
 
-<ol>
-<li><a href="docs/01-Documentação de Contexto.md"> Documentação de Contexto</a></li>
-<li><a href="docs/02-Especificação do Projeto.md"> Especificação do Projeto</a></li>
-<li><a href="docs/03-Metodologia.md"> Metodologia</a></li>
-<li><a href="docs/04-Projeto de Interface.md"> Projeto de Interface</a></li>
-<li><a href="docs/05-Arquitetura da Solução.md"> Arquitetura da Solução</a></li>
-<li><a href="docs/06-Template Padrão da Aplicação.md"> Template Padrão da Aplicação</a></li>
-<li><a href="docs/07-Programação de Funcionalidades.md"> Programação de Funcionalidades</a></li>
-<li><a href="docs/08-Plano de Testes de Software.md"> Plano de Testes de Software</a></li>
-<li><a href="docs/09-Registro de Testes de Software.md"> Registro de Testes de Software</a></li>
-<li><a href="docs/10-Plano de Testes de Usabilidade.md"> Plano de Testes de Usabilidade</a></li>
-<li><a href="docs/11-Registro de Testes de Usabilidade.md"> Registro de Testes de Usabilidade</a></li>
-<li><a href="docs/12-Apresentação do Projeto.md"> Apresentação do Projeto</a></li>
-<li><a href="docs/13-Referências.md"> Referências</a></li>
-</ol>
+- [Documentação de Contexto](docs/01-Documentação%20de%20Contexto.md)
+- [Especificação do Projeto](docs/02-Especificação%20do%20Projeto.md)
+- [Metodologia](docs/03-Metodologia.md)
+- [Projeto de Interface](docs/04-Projeto%20de%20Interface.md)
+- [Arquitetura da Solução](docs/05-Arquitetura%20da%20Solução.md)
+- [Template Padrão da Aplicação](docs/06-Template%20Padrão%20da%20Aplicação.md)
+- [Programação de Funcionalidades](docs/07-Programação%20de%20Funcionalidades.md)
+- [Plano de Testes de Software](docs/08-Plano%20de%20Testes%20de%20Software.md)
+- [Registro de Testes de Software](docs/09-Registro%20de%20Testes%20de%20Software.md)
+- [Plano de Testes de Usabilidade](docs/10-Plano%20de%20Testes%20de%20Usabilidade.md)
+- [Registro de Testes de Usabilidade](docs/11-Registro%20de%20Testes%20de%20Usabilidade.md)
+- [Apresentação do Projeto](docs/12-Apresentação%20do%20Projeto.md)
+- [Referências](docs/13-Referências.md)
 
 # Código
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+[Código Fonte](src/README.md)
 
 # Apresentação
 
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
+[Apresentação da solução](presentation/README.md)
