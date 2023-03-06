@@ -70,9 +70,16 @@ Inserir imagem:
 
 # Matriz de Rastreabilidade
 
-A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
-
-A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
+|    | RF-001 | RF-002 | RF-003 | RF-004 | RF-005 | RF-006 | RF-007 | RF-008 |
+|------|----|----|----|----|----|----|----|----|
+|RF-001| | x | x | x | x |  | x |  |
+|RF-002|x|  |  |  |  |  |  |  |
+|RF-003| x |  |  |  |  |  |  |  |
+|RF-004| x |  |  |  |  |  |  |  |
+|RF-005| x |  |  |  |  |  |  |  |
+|RF-006|  |  |  |  |  |  |  |  |
+|RF-007| x |  |  |  |  |  |  |  |
+|RF-008|  |  |  |  |  |  |  |  |
 
 ![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
 
