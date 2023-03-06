@@ -29,3 +29,25 @@ Adicione informações sobre o público-alvo por meio de uma descrição textual
 > - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
 > - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
 > - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+
+Gláucio da Costa Silva - 19 anos, aluno no curso de Ciências da Computação. 
+Hobbies: Gosta de jogar videogame, sair com os amigos e ler diversos tipos de sites informativos sobre o mundo gamer. 
+Conhecimentos: Fez um pequeno curso de SQL na Alura e de C# na UDEMY, busca crescer na área de TI. 
+Trabalho: Exerce a função de vendedor em uma loja conceituada na região Norte. 
+
+Edivan Neto Rossi - 24 anos, aluno no curso de Ciências da Computação. 
+Hobbies: Gosta sair com os amigos, cozinhar e assistir vídeos de jogos. 
+Conhecimentos: Java, HTML e um pequeno curso de CSS. 
+Trabalho: Exerce a função de Suporte em uma empresa de gestão de atividades.
+
+Clara Ferreira Benevides - 21 anos, aluna no curso de Ciências da Computação. 
+Hobbies: Gosta de jogar videogame, sair com as amigas e de ler diversos livros. 
+Conhecimentos: HTML, SQL e C#. 
+Trabalho: Exerce a função de Analista de sistemas e maquiadora nas horas vagas.
+
+João Victor Cunha - 45 anos, professor do curso de Ciências da Computação. 
+Hobbies: Cozinhar, passear com a família e interagir com os amigos. 
+Conhecimentos: Todos os tipos de programações e cursado em comunicação interpessoal.
+Trabalho: Exerce a função de professor à mais de 15 anos, na área da Ciência da Computação.
+
+
