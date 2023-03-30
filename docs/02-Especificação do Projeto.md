@@ -6,6 +6,8 @@ Os pontos mais relevantes mediante as especificações propostas foram mencionad
 
 ### Gláucio da Costa Silva
 
+![glaucio](https://user-images.githubusercontent.com/26356962/228981160-feae83bb-2a0a-42d4-aa2c-9da7e495d139.png)
+
 > 19 anos, aluno no curso de Ciências da Computação.
 
 |                   |                                                                                                              |
@@ -15,6 +17,8 @@ Os pontos mais relevantes mediante as especificações propostas foram mencionad
 | **Trabalho**      | Exerce a função de vendedor em uma loja conceituada na região Norte de Belo Horizonte.                       |
 
 ### Edivan Neto Rossi
+
+![edivan](https://user-images.githubusercontent.com/26356962/228981101-76e2eb6f-7491-4b51-91f1-e2e1d94c9043.png)
 
 > 24 anos, aluno no curso de Ciências da Computação.
 
@@ -26,6 +30,8 @@ Os pontos mais relevantes mediante as especificações propostas foram mencionad
 
 ### Clara Ferreira Benevides
 
+![clara](https://user-images.githubusercontent.com/26356962/228981046-959155a8-896c-4748-9b39-1cb6afcf77f4.png)
+
 > 21 anos, aluna no curso de Ciências da Computação.
 
 |                   |                                                                        |
@@ -35,6 +41,8 @@ Os pontos mais relevantes mediante as especificações propostas foram mencionad
 | **Trabalho**      | Exerce a função de Analista de sistemas e maquiadora nas horas vagas.  |
 
 ### João Victor Cunha
+
+![joao](https://user-images.githubusercontent.com/26356962/228980999-6c9bb794-8bb1-4c3a-bf0b-7d4adccf1162.png)
 
 > 45 anos, aluno no curso de Ciências da Computação.
 
