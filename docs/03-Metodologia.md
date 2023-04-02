@@ -54,7 +54,7 @@ Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum 
 
 Estamos utilizando a ferramenta de gerenciamento de atividades disponibilizadas pelo próprio Github, para que possamos organizar nossas atividades. 
 
-> Inserir imagem 
+![Imagem]https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t4-time5-projgrupo/blob/2c99f60e7ba770b1772b1d042cef88caec0bb70c/docs/img/GerenciadorDeAtividades.png 
  
 ### Ferramentas
 
@@ -65,8 +65,3 @@ As ferramentas empregadas no projeto são:
 - Ferramentas de comunicação: Teams e Whatsapp - Utilizado o teams foi escolhido para termos um tempo de reuniões mais longos, já o whatsapp é voltado para uma comunicação mais rápida.
 
 - Ferramentas de desenho de tela (_wireframing_): Figma
-
-
-
-
- 
