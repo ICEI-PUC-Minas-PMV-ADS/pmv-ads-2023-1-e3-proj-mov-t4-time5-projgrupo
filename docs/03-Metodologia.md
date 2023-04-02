@@ -21,7 +21,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 
 Modelo utilizado para código fonte:
 
-!(https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t4-time5-projgrupo/blob/1267a0e3c7335551ac798298fa216f269d1c879a/docs/img/MicrosoftTeams-image.png)
+![imagem](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t4-time5-projgrupo/blob/1267a0e3c7335551ac798298fa216f269d1c879a/docs/img/MicrosoftTeams-image.png)
 
 O projeto segue a seguinte convenção para o nome de branches:
 
