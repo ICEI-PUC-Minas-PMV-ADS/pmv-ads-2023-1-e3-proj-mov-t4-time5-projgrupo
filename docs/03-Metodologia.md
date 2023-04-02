@@ -11,8 +11,8 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 
 | Projeto                    | Plataforma utilizada                                   | Links      |
 | ------                     | ------------------------------------------------------ | ---------- |
-| Repositório                | GitHub                                                 | (https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t4-time5-projgrupo)   |
-| Controle de Atividades     | Github                                                 |   https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/242/views/1     |
+| Repositório                | GitHub                                                 | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t4-time5-projgrupo)   |
+| Controle de Atividades     | Github                                                 | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/242/views/1     |
 | Interface e Wireframes     | Figma                                                  | EDITAR       |
 | Comunicação/Reniões        | Teams/Whatsapp                                         |  https://teams.microsoft.com/_#/conversations/19:09f7687db2024992a0e795e1991f3273@thread.v2?ctx=chat    |
 
@@ -54,7 +54,7 @@ Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum 
 
 Estamos utilizando a ferramenta de gerenciamento de atividades disponibilizadas pelo próprio Github, para que possamos organizar nossas atividades. 
 
-![Imagem]https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t4-time5-projgrupo/blob/2c99f60e7ba770b1772b1d042cef88caec0bb70c/docs/img/GerenciadorDeAtividades.png 
+![Imagem](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t4-time5-projgrupo/blob/2c99f60e7ba770b1772b1d042cef88caec0bb70c/docs/img/GerenciadorDeAtividades.png) 
  
 ### Ferramentas
 
