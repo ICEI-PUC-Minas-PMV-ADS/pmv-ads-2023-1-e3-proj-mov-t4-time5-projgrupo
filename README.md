@@ -16,8 +16,8 @@ Nele será possível encontrar grupos, conhecer quem faz parte de seu grupo, ver
 - [Iago José Silva Ferreira](https://github.com/iagxferreira)
 - [Ian Amaral Barbosa Moreira](https://github.com/ian-br)
 - [Marco Túlio Félix Santiago](https://github.com/TulioFS)
+- [Rafael Dias Rubio](https://github.com/rafaeldrubio)
 - Marcos Damas Anacleto
-- Rafael Dias Rubio
 
 ## Orientador
 
