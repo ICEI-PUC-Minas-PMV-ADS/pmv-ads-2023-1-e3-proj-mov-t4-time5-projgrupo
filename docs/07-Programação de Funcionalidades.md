@@ -6,10 +6,19 @@ Implementação do sistema descritas por meio dos requisitos funcionais e/ou nã
 
 Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
-> **Links Úteis**:
->
-> - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
-> - [JSON Tutorial](https://www.w3resource.com/JSON)
-> - [JSON Data Set Sample](https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html)
-> - [JSON - Introduction (W3Schools)](https://www.w3schools.com/js/js_json_intro.asp)
-> - [JSON Tutorial (TutorialsPoint)](https://www.tutorialspoint.com/json/index.htm)
+![Exemplo de Wireframe](img/Wareframe.jpg)
+
+Segue requisitos Funcionais utilizados em cada tela
+
+| ID     | Descrição do Requisito                                 | Respectiva tela      |
+| ------ | ------------------------------------------------------ | ---------------------|
+| RF-001 | Permitir cadastro ao APP                               | Segunda imagem       |
+| RF-002 | Tela inicial deve conter o botão de login              | Primeira imagem      |
+| RF-003 | Permitir acesso dos usuários a tela de tarefas/grupos  | Terceira imagem      |
+| RF-004 | Permitir criação de grupos pelos usuários              | Quarta imagem        |
+| RF-005 | Permitir criação de tarefas pelos usuários (professor) | Quarta imagem        |
+| RF-006 | Apresentar o prazo para cada atividade gerada          | Quarta imagem        |
+| RF-007 | Tela de Histórico do Usuário                           | Terceira imagem      |
+| RF-008 | Notificações de prazos de entrega das tarefas          | Quarta imagem        |
+
+- Será 
