@@ -21,4 +21,4 @@ Segue requisitos Funcionais utilizados em cada tela
 | RF-007 | Tela de Histórico do Usuário                           | Terceira imagem      |
 | RF-008 | Notificações de prazos de entrega das tarefas          | Quarta imagem        |
 
-- Será 
+- Assim que a equipe der início a criação do back-end para o aplicativo, será inserido as imagens com os códigos utilizados para a criação de cada tela!
