@@ -8,7 +8,7 @@ Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
 ![Exemplo de Wireframe](img/Wareframe.jpg)
 
-Segue requisitos Funcionais utilizados em cada tela
+Segue requisitos Funcionais especificados em cada tela:
 
 | ID     | Descrição do Requisito                                 | Respectiva tela      |
 | ------ | ------------------------------------------------------ | ---------------------|
