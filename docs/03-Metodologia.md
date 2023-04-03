@@ -13,7 +13,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 | ------                     | ------------------------------------------------------ | ---------- |
 | Repositório                | GitHub                                                 | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t4-time5-projgrupo)   |
 | Controle de Atividades     | Github                                                 | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/242/views/1     |
-| Interface e Wireframes     | Figma                                                  | EDITAR       |
+| Interface e Wireframes     | Figma                                                  | https://encurtador.com.br/nstwH       |
 | Comunicação/Reniões        | Teams/Whatsapp                                         |  https://teams.microsoft.com/_#/conversations/19:09f7687db2024992a0e795e1991f3273@thread.v2?ctx=chat    |
 
 
