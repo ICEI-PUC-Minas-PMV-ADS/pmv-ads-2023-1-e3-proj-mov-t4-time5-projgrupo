@@ -119,33 +119,25 @@ Inserir imagem:
 
 ![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
 
-> **Links Úteis**:
->
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
-
 ## Gerenciamento de Projeto
 
-De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
+Conforme o PMBoK v6, as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
 
-Para o Gerenciamento do projeto, optamos pela utilização do DevOps e do Kanban para registros e criações das demandas, visto que se torna mais prático e ágil para a visibilidade de todos os integrantes do grupo.
+Para o Gerenciamento do projeto, optamos pela utilização do Kanban e do Scrum para registros e criações das demandas, visto que se torna mais prático e ágil para a visibilidade de todos os integrantes do grupo.
 
 ### Gerenciamento de Tempo
 
 Conforme citado acima, utilizaremos o DevOps com o intuito de facilitar o gerenciamento de Projeto e Tempo, pois o mesmo contém o registros de horas gastas em cada demanda por sprint, visto que facilita o monitoramento geral do SCRUM MASTER durante o desenvolvimento do projeto.
 
-### Gestão de Orçamento
+### Gerenciamento de Orçamento
 
 Custos financeiros para o início e continuidade do projeto (sujeito a mudanças)
 
-Gasto estimado | Valor
-Recursos Humanos | R$ 15.000,00
-4 Aparelhos Android 8/13 | R$ 12.000,00
-2 Notebooks | R$ 5.000,00
-Licenças de Softwares | R$ 100.000,00
-Cursos e treinamentos | R$ 25.000,00
-Especialização | R$ 12.500,00
-3 Desenvolvedores Salários | R$ 20.000,00
-
 TOTAL |R$ 189.500,00
+
+| Descrição                       | Valor          |
+|---------------------------------|----------------|
+| 6 desenvolvedores - salário     | R$ 10.000      |
+| Gastos com infraestrutura - AWS | R$ 1.000       |
+| Licença da PlayStore            | U$ 25 ≈ R$ 130 |
+| Total                           | R$ 11.130      |
