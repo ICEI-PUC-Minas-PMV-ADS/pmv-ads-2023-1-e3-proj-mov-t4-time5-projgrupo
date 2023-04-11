@@ -1,6 +1,6 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
-import { Pressable, useColorScheme } from 'react-native';
+import { Tabs } from 'expo-router';
+import { useColorScheme } from 'react-native';
 
 import Colors from '../../constants/Colors';
 
@@ -21,32 +21,19 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+          headerShown: false,
       }}>
       <Tabs.Screen
-        name="index"
+        name="SigninScreen"
         options={{
-          title: 'Tab One',
+          title: 'Login',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="SignupScreen"
         options={{
-          title: 'Tab Two',
+          title: 'Cadastro',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />

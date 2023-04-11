@@ -1,9 +1,10 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateUserDto } from '../dto/create-user.dto';
-import { UpdateUserDto } from '../dto/update-user.dto';
+import { UpdateTokenDto } from '../dto/update-token.dto';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserEntity } from '../entities/user.entity';
+import { UpdateUserDto } from '../dto/update-user.dto';
 
 @Injectable()
 export class UsersService {
@@ -24,11 +25,11 @@ export class UsersService {
     return this.userRepository.find({ withDeleted: false });
   }
 
-  async findOne(id: string): Promise<UserEntity> {
+  async findById(id: string): Promise<UserEntity> {
     const user = await this.userRepository.findOne({
       where: { id },
       withDeleted: false,
-      select: ['email', 'firstName', 'lastName', 'accessToken'],
+      select: ['id', 'email', 'firstName', 'lastName'],
     });
     if (!user) throw new HttpException('User not found', HttpStatus.NOT_FOUND);
     return user;
@@ -43,6 +44,10 @@ export class UsersService {
   }
 
   async update(id: string, document: UpdateUserDto): Promise<void> {
+    await this.userRepository.update({ id }, document);
+  }
+
+  async updateToken(id: string, document: UpdateTokenDto): Promise<void> {
     await this.userRepository.update({ id }, document);
   }
 

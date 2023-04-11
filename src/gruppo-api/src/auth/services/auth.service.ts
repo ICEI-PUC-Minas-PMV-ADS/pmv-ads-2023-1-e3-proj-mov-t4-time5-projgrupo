@@ -28,7 +28,9 @@ export class AuthService {
         expiresIn: '7days',
       }),
     };
-    await this.usersService.update(jwt.id, { accessToken: jwt.access_token });
+    await this.usersService.updateToken(jwt.id, {
+      accessToken: jwt.access_token,
+    });
     return jwt;
   }
 }
