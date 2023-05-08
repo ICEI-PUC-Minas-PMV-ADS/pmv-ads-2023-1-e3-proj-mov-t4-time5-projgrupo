@@ -52,11 +52,13 @@ export class UsersController {
     @Body() body: UpdateUserDto,
     @Res() response: Response,
   ) {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //@ts-ignore
-    return response
-      .status(HttpStatus.CREATED)
-      .send(this.usersService.update(id, body));
+    return (
+      response
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
+        .status(HttpStatus.CREATED)
+        .send(this.usersService.update(id, body))
+    );
   }
 
   @Delete(':id')

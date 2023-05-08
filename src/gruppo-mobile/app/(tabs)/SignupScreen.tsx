@@ -15,9 +15,9 @@ export default function SignupScreen() {
         try {
             const response = await client.postSignup({firstName, lastName, email, password, confirmedPassword})
             if (response.status === 201) {
-                const {data: {id}} = await client.postLogin({email, password})
+                const {data: { access_token: token }} = await client.postLogin({email, password})
                 //@ts-ignore
-                navigation.navigate('ProfileScreen', {id})
+                navigation.navigate('ProfileScreen', { token })
             }
         } catch (e: any) {
             console.log(e.message)
