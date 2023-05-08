@@ -4,7 +4,7 @@ export class AxiosClient{
     private readonly baseURL: string;
     private client: AxiosInstance;
     constructor() {
-        this.baseURL = "http://192.168.15.5:3000/api/v1"
+        this.baseURL = "http://192.168.15.6:3000/api/v1"
         this.client = axios.create({
             baseURL: this.baseURL
         })
@@ -20,16 +20,28 @@ export class AxiosClient{
         })
     }
 
+    async postLogin(data: any){
+        return this.client.post("/auth/login", data)
+    }
 
-    async postLogin(loginBody: any){
-        return this.client.post("/auth/login",
-            loginBody
+    async postSignup(data: any){
+        return this.client.post("/users", data)
+    }
+
+    async getProfile(token: string){
+        return this.client.get("/auth/profile", {
+                headers: {
+                    "authorization": `bearer ${token}`
+                }
+            }
         )
     }
 
-    async postSignup(signupBody: any){
-        return this.client.post("/users",
-            signupBody
-        )
+    async putEditUser(id: string,data: any, token: string){
+        return this.client.put(`/users/${id}`, data, {
+            headers: {
+                "authorization": `bearer ${token}`
+            }
+        })
     }
 }

@@ -8,10 +8,13 @@ import {
   ParseUUIDPipe,
   Post,
   Put,
+  Res,
+  UseGuards,
 } from '@nestjs/common';
 import { UsersService } from '../services/users.service';
 import { CreateUserDto } from '../dto/create-user.dto';
 import { UpdateUserDto } from '../dto/update-user.dto';
+import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard';
 
 @Controller('users')
 export class UsersController {
@@ -38,6 +41,7 @@ export class UsersController {
     return this.usersService.findById(id);
   }
 
+  @UseGuards(JwtAuthGuard)
   @Put(':id')
   update(
     @Param(
@@ -46,8 +50,13 @@ export class UsersController {
     )
     id: string,
     @Body() body: UpdateUserDto,
+    @Res() response: Response,
   ) {
-    return this.usersService.update(id, body);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
+    return response
+      .status(HttpStatus.CREATED)
+      .send(this.usersService.update(id, body));
   }
 
   @Delete(':id')

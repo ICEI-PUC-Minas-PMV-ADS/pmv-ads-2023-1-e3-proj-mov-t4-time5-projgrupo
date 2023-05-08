@@ -15,10 +15,9 @@ export default function SignupScreen() {
         try {
             const response = await client.postSignup({firstName, lastName, email, password, confirmedPassword})
             if (response.status === 201) {
-                const {data} = await client.postLogin({email, password})
-                console.log(data)
+                const {data: {id}} = await client.postLogin({email, password})
                 //@ts-ignore
-                navigation.navigate('ProfileScreen', { id })
+                navigation.navigate('ProfileScreen', {id})
             }
         } catch (e: any) {
             console.log(e.message)
@@ -77,9 +76,10 @@ export default function SignupScreen() {
                             />
                             <TouchableOpacity
                                 style={styles.signupButton}
+                                //@ts-ignore
                                 onPress={handleSubmit}
                             >
-                                <Text>Submit</Text>
+                                <Text>Cadastrar-se</Text>
                             </TouchableOpacity>
                         </>
                     )}
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: 'bold',
-        marginBottom: 52
+        marginBottom: 36
     },
     separator: {
         marginVertical: 30,

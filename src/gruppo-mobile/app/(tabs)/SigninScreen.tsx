@@ -1,4 +1,4 @@
-import {StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import { StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import {Text, View} from '../../components/Themed';
 import React from "react";
 import {client} from "../../clients";
@@ -6,26 +6,26 @@ import {Formik} from 'formik'
 import {AxiosError} from "axios";
 import {useNavigation} from "expo-router";
 
-
-
-
 export default function TabOneScreen() {
     const navigation = useNavigation()
     const handleLogin = async ({email, password}: { email: string | null, password: string | null }) => {
         if (!email) return alert('O email não pode ser vazio.')
+        if (!password) return alert('Não se esqueça de digitar sua senha.')
         if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) return alert('O formato do email é inválido.');
 
         try {
-            const { data: { id } } = await client.postLogin({ email, password })
+            const {data: {access_token: token}} = await client.postLogin({email, password})
             // @ts-ignore
-            navigation.navigate('ProfileScreen', { id })
+            navigation.navigate('ProfileScreen', { token })
             // @ts-ignore
         } catch (e: AxiosError) {
-            if(e.response.status) return alert("Usuário não encontrado.")
+            if (e.response.status) return alert("Usuário não encontrado.")
+            return alert(e.message)
         }
     }
     // @ts-ignore
     return (
+
         <View style={styles.container}>
             <Text style={styles.title}>Login</Text>
             <View style={styles.textBoxContainer}>
@@ -53,9 +53,10 @@ export default function TabOneScreen() {
                             />
                             <TouchableOpacity
                                 style={styles.loginButton}
+                                //@ts-ignore
                                 onPress={handleSubmit}
                             >
-                                <Text>Submit</Text>
+                                <Text>Login</Text>
                             </TouchableOpacity>
                         </>
                     )}
@@ -96,6 +97,6 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: 'bold',
-        marginBottom: 52
+        marginBottom: 36
     },
 });
