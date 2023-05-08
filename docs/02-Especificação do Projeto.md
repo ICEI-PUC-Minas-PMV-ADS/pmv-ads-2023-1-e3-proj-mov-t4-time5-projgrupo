@@ -61,6 +61,24 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Usuário              | Visualizar tarefas/grupos           | Melhor organização das atividades |
 | Administrador        | Visualizar/Avaliar grupos e tarefas | Conduzir/Organizar os grupos      |
 
+## Indicadores de Desempenho 
+
+Tabela voltada para os registros dos desempenhos esperados para cada situação semanalmente, tendo assim, a disponibilidade de efetuarmos ajustes e termos feedbacks mais rápidos e efetivos. 
+
+| # | Indicadores                   | Cálculo                                          | 
+| - | ------------------------------| -------------------------------------------------|
+| 1 | Usuários cadastrados          | Média de usuários cadastrados na semana          |
+| 2 | Qualidade do APP              | Testes semanais realizados pela nossa equipe     |
+| 3 | tempo estimado de uso do APP  | Média diária em que o usuário ficou online       |
+| 4 | Desinstalações                | Média de desinstalações semanal do APP           |
+| 5 | Avaliação do APP              | Média das notas dos clientes para o APP          |
+
+Objetivo - Indicadores gerados para avaliarmos o potencial crescimento do nosso Aplicativo, tendo a visibilidade dos aspectos que julgamos como primordiais para o aumento da produtividade e desenvolvimento da nossa equipe/app.
+
+Perspectiva - Temos como foco o alcance nacional para o uso do nosso APP em até 4 anos. Facilitando assim o auxilio ao ensino em todas as escolas diariamente, tendo como objetivo, o fácil acompanhamento de materias, atividades, grupos e dúvidas. 
+
+Fonte - O app encontra-se publicado na Play Store/Apple Store. 
+
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
