@@ -19,8 +19,7 @@ export function Login() {
   // @ts-ignore
   return (
     <Container>
-      <FormContainer style={{backgroundColor: '#00000000'}}>
-        <Text asTitle weight="bold">Login</Text>
+      <FormContainer style={{backgroundColor: '#00000000'}}>        
         <Formik
           initialValues={{ email: '', password: '' }}
           onSubmit={handleLogin}
