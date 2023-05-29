@@ -23,7 +23,7 @@ const Page = styled.ScrollView`
 const Container = styled.View<ContainerProps>`
   flex: 1;
   padding-top: ${Platform.OS === "android" ? StatusBar.currentHeight : 0}px;
-  flex-direction: ${({isLandscape}) => isLandscape ? 'row' : 'column'};
+  flex-direction: ${({ isLandscape }) => isLandscape ? 'row' : 'column'};
   background-color: ${({ theme }) => theme.color.background.alt};
   align-items: center;
   justify-content: center;
@@ -40,8 +40,8 @@ const Image = styled.ImageBackground<ImageProps>`
   resize-mode: contain;
   justify-content: center;
   align-items: center;
-  width: ${({ isPortrait, appWidth }) => isPortrait && appWidth < 720 ? appWidth - 64 : 360}px;
-  height: ${({ isPortrait, appWidth }) => isPortrait && appWidth < 720 ? appWidth - 64 : 360}px;  
+  width: ${({ isPortrait, appWidth }) => isPortrait && appWidth < 900 ? appWidth - 64 : 360}px;
+  height: ${({ isPortrait, appWidth }) => isPortrait && appWidth < 900 ? appWidth - 64 : 360}px;  
   margin: 16px;
 `;
 
@@ -49,9 +49,9 @@ export default function AuthScreen({ children }) {
   const storage = StorageService();
   const { user, Validate } = useAuth();
   const [isValid, setIsValid] = useState<boolean>(false);
+  const [isPortrait, setIsPortrait] = useState<boolean>(true);
   const { height, width } = Dimensions.get('window');
-  const isPortrait = height > width;
-  const isPhone = width < 720;
+  const isPhone = width < 900;
 
   if (isPhone) {
     ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.PORTRAIT_UP);
@@ -63,7 +63,13 @@ export default function AuthScreen({ children }) {
     });
   }, [isValid])
 
-  useEffect(() => {}, [user]);
+  useEffect(() => {
+    const getOrientation = async () => {
+      const orientation = await ScreenOrientation.getOrientationAsync();
+      setIsPortrait(orientation == ScreenOrientation.Orientation.PORTRAIT_UP);
+    }
+    ScreenOrientation.addOrientationChangeListener(getOrientation)    
+  }, []);
 
   return user ? <>{children}</> : (
     <Page>
