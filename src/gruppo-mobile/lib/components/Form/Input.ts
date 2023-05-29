@@ -10,4 +10,5 @@ export const Input = styled.TextInput`
   padding: 8px 16px;
   border-radius: 5px;
   background-color: ${(props) => props.theme.color.background.main};
+  color: ${(props) => props.theme.color.text.alt};
 `;

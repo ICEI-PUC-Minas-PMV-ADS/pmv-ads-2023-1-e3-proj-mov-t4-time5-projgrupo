@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useColorScheme } from 'react-native'
 
 import { useFonts } from 'expo-font';
 import { Stack, ErrorBoundary } from 'expo-router';
@@ -19,7 +20,8 @@ export const unstable_settings = {
 
 export default function RootLayout() {
   const storage = StorageService();
-  const [theme, setTheme] = useState('light');
+  const colorScheme = useColorScheme();
+  const [theme, setTheme] = useState(colorScheme);
   const [loaded, error] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
     ...FontAwesome.font,
@@ -38,6 +40,7 @@ export default function RootLayout() {
   const getTheme = async () => {
     try {
       const themeValue = await storage.get('@Gruppo:theme');
+      //@ts-ignore
       if (themeValue) setTheme(themeValue);
     } catch (error) {
       console.log(error);
