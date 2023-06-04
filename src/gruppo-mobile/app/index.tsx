@@ -1,38 +1,33 @@
-import { StyleSheet } from 'react-native';
-import { Text, View } from '../components/Themed';
-import {Link} from "expo-router";
+import { Button } from '@lib/components/Form/Button';
+import { StatusBar, Platform } from 'react-native';
+import styled from 'styled-components/native';
+
+import { Text } from '../lib/components';
+import { useAuth } from './Auth/provider/AuthProvider';
+
+const Page = styled.SafeAreaView`
+  flex: 1;
+  flex-direction: column;
+  padding-top: ${Platform.OS === "android" ? StatusBar.currentHeight : 0}px;
+  background-color: ${({ theme }) => theme.color.background.alt};
+`;
+
+const View = styled.View`
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+`;
 
 export default function HomeScreen() {
+  const { user, Logout } = useAuth();
   return (
-    <View style={styles.container}>
-      <Link href="/(tabs)/SignupScreen" style={styles.link}>
-        <Text style={styles.linkText}>Registre-se agora!</Text>
-      </Link>
-    </View>
+    <Page>
+      <View>
+        <Text>Hello {user.firstName}!</Text>
+        <Button onPress={Logout}>
+          <Text>Sair</Text>
+        </Button>
+      </View>
+    </Page>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-  },
-  linkText: {
-    fontSize: 14,
-    color: '#2e78b7',
-  },
-});
