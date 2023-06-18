@@ -29,7 +29,7 @@ export class UsersService {
     const user = await this.userRepository.findOne({
       where: { id },
       withDeleted: false,
-      select: ['id', 'email', 'firstName', 'lastName'],
+      select: ['id', 'email', 'firstName', 'lastName', 'picture', 'github', 'internalId'],
     });
     if (!user) throw new HttpException('User not found', HttpStatus.NOT_FOUND);
     return user;
@@ -39,7 +39,7 @@ export class UsersService {
     return this.userRepository.findOne({
       where: { email },
       withDeleted: false,
-      select: ['email', 'password', 'accessToken', 'id', 'firstName'],
+      select: ['email', 'password', 'accessToken', 'id', 'firstName', 'picture', 'github', 'internalId', 'role'],
     });
   }
 

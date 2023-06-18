@@ -35,10 +35,38 @@ export class UserEntity {
   lastName: string;
 
   @Column({
+    nullable: true,
+    default: null,
+    name: 'internal_id'
+  })
+  internalId: string;
+
+  @Column({
+    nullable: true,
+    default: null,
+    name: 'role'
+  })
+  role: string;
+
+  @Column({
     unique: true,
     transformer: transformToLowerCase,
   })
   email: string;
+
+  @Column({
+    unique: true,
+    nullable: true,
+    default: null,
+    transformer: transformToLowerCase,
+  })
+  github: string;
+
+  @Column({
+    nullable: true,
+    default: null,
+  })
+  picture: string;
 
   @Column({ transformer: hashPassword, select: false })
   password: string;
