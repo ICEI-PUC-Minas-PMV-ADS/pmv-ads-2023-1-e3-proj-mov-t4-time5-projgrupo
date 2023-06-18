@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  HttpException,
   HttpStatus,
   Param,
   ParseUUIDPipe,
@@ -30,16 +31,18 @@ export class UsersController {
     return this.usersService.findAll();
   }
 
-  @Get(':id')
+  @Get(':email')
   findOne(
     @Param(
-      'id',
-      new ParseUUIDPipe({ errorHttpStatusCode: HttpStatus.BAD_REQUEST }),
+      'email'
     )
-    id: string,
+    email: string,
   ) {
-    return this.usersService.findById(id);
-  }
+    return this.usersService.findByEmail(email).then((user) => { 
+      if (!user) return new HttpException('User not found', HttpStatus.NOT_FOUND);
+      return user; 
+    });
+  } 
 
   @UseGuards(JwtAuthGuard)
   @Put(':id')
@@ -61,6 +64,7 @@ export class UsersController {
     );
   }
 
+  @UseGuards(JwtAuthGuard)
   @Delete(':id')
   remove(
     @Param(
