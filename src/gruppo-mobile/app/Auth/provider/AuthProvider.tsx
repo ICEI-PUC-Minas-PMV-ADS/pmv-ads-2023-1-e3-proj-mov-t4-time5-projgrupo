@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+import { useJwt } from 'react-jwt';
 
 import { StorageService } from '../../../lib/services/StorageService';
 import { AuthService } from './service/AuthService';
@@ -8,7 +9,6 @@ import { Profile } from './service/models/Profile';
 interface AuthContextData {
   user: Profile | null;
   Login(user: LoginPayload): Promise<void>;
-  Validate(token: string): Promise<boolean>;
   Logout(): void;
 }
 
@@ -17,51 +17,30 @@ const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 export function AuthProvider({ children }) {
   const service = AuthService.getInstance();
   const storage = StorageService();
-  const [user, setUser] = useState<Profile | null>(null);
-  const [token, setToken] = useState<string>('');
+  const [user, setUser] = useState<Profile | null>(null),
+        [token, setToken] = useState<string>('');    
+  const [count, setCount] = useState(0),
+        { isExpired, reEvaluateToken } = useJwt(token);
 
   useEffect(() => {
-    storage.get('user').then((response) => {
-      if (response) {
-        if (response !== 'undefined') {
-          setUser(JSON.parse(response));
-        } else {
-          setUser(null);
-          storage.remove('user');
-        }
+    const timer = setTimeout(() => {
+      reEvaluateToken(token);  
+      if (isExpired && token !== '') {
+        Logout();
       }
-    });
-    storage.get('token').then((response) => {
-      if (response) {
-        if (response !== 'undefined') {
-          setToken(response);
-        } else {
-          setToken('');
-          storage.remove('token');
-        }
-      }
-    });
+      setCount(count + 1);
+    }, 1e3)
+    return () => clearTimeout(timer)
+  }, [count, isExpired])
+
+  useEffect(() => {
+    try {
+      Login();
+    } catch (e) {
+      Logout();
+    }
   }, []);
 
-  const Login = async (userData?: LoginPayload) => {
-    const token = await storage.get('token');
-    const valid = await Validate(token);
-    if (valid) {
-      return;
-    }
-    if (userData) {
-      const response = await service.postLogin(userData);
-
-      if (response.data.access_token) {
-        setToken(response.data.access_token);
-        storage.set('token', response.data.access_token);
-        await Validate(response.data.access_token)
-      } else {
-        throw new Error(response.data.message);
-      }
-    }
-  }
-  
   const Logout = () => {
     setToken('');
     setUser(null);
@@ -69,21 +48,38 @@ export function AuthProvider({ children }) {
     storage.remove('user');
   }
 
-  const Validate = async (token: string): Promise<boolean> => {
-    if (token) {
-      const response = await service.getProfile(token);
-      if (response?.data) {
-        storage.set('user', JSON.stringify(response.data));
-        setUser(response.data);
-        return true;
-      }
+  const Login = async (userData?: LoginPayload): Promise<void> => {
+    if (!userData) {
+      storage.get('token').then(async (storageToken) => {
+        if (storageToken && storageToken !== 'undefined') {
+          service.getProfile(storageToken).then(({ data }) => {
+            if (data.id) {
+              setToken(storageToken);
+              setUser(data);
+              storage.set('user', JSON.stringify(data));
+            }
+          });
+        }
+      });
+    } else {
+      service.postLogin(userData).then(async ({ data }) => {
+        if (data.access_token) {
+          const accessToken = data.access_token;
+          service.getProfile(accessToken).then(({ data }) => {
+            if (data.id) {
+              setToken(accessToken);
+              setUser(data);
+              storage.set('user', JSON.stringify(data));
+              storage.set('token', accessToken);
+            }
+          });
+        }
+      });
     }
-    Logout();
-    return false;
   }
 
   return (
-    <AuthContext.Provider value={{ Validate, user, Login, Logout }}>
+    <AuthContext.Provider value={{ user, Login, Logout }}>
       {children}
     </AuthContext.Provider>
   );
@@ -91,6 +87,5 @@ export function AuthProvider({ children }) {
 
 export function useAuth() {
   const context = useContext(AuthContext);
-
   return context;
 }

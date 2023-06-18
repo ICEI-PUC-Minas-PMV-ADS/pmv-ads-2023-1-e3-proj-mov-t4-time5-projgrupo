@@ -8,7 +8,7 @@ import { AuthService } from "../../Auth/provider/service/AuthService";
 import PersonIcon from "../../../assets/images/user-icon.png";
 
 
-export default function ProfileScreen() {
+export default function ViewProfile() {
   //@ts-ignore
   const { params: { token } } = useRoute();
   const [person, setPerson] = useState(null);
