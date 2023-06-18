@@ -1,3 +1,5 @@
+import Constants from "expo-constants";
+
 export default {
-    API_URL: process.env.API_URL || "http://localhost:3000/api/v1"
+  API_URL: Constants.expoConfig.extra.API_URL,
 }
