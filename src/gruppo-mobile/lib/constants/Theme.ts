@@ -17,7 +17,7 @@ const DarkTheme: DefaultTheme = {
     },
     background: {
       main: '#474747',
-      alt: '#6b6b6b'
+      alt: '#141414'
     },
     primary: "#007aff",
     secondary: "#ff9500",

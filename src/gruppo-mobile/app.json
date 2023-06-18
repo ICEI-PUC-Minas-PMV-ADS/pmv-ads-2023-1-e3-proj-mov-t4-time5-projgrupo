@@ -2,10 +2,13 @@
   "expo": {
     "name": "gruppo-mobile",
     "slug": "gruppo-mobile",
-    "version": "1.0.0",    
+    "version": "1.0.0",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
+    "extra": {
+      "API_URL": "http://192.168.0.106:3000/api/v1"
+    },
     "splash": {
       "image": "./assets/images/icon.png",
       "resizeMode": "contain",
