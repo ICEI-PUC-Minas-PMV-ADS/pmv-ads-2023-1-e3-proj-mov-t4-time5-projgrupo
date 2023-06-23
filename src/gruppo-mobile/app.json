@@ -7,7 +7,10 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "extra": {
-      "API_URL": "http://192.168.0.106:3000/api/v1"
+      "API_URL": "https://gruppo-api-euaaron.vercel.app/v1",
+      "eas": {
+        "projectId": "7de4da8c-5a8e-4cc4-9e49-f234da6f2acb"
+      }
     },
     "splash": {
       "image": "./assets/images/icon.png",
@@ -19,13 +22,15 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "requireFullScreen": true
+      "requireFullScreen": true,
+      "bundleIdentifier": "app.gruppo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#000000"
-      }
+      },
+      "package": "app.gruppo"
     },
     "web": {
       "bundler": "metro",

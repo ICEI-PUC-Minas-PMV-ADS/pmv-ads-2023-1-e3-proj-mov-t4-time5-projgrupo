@@ -1,6 +1,7 @@
+import { Link } from "expo-router";
 import styled from "styled-components/native";
 
-interface IButtonProps {
+interface IButtonLinkProps {
   color?: string;
   paddingVertical?: string;
   paddingHorizontal?: string;
@@ -30,10 +31,12 @@ function getBackgroundColor(color, variant = 'primary', theme) {
   return color;
 }
 
-export const Button = styled.TouchableOpacity<IButtonProps>`
+export const ButtonLink = styled(Link)<IButtonLinkProps>`
   flex: 1;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  line-height: 30px;
   min-height: 50px;
   max-height: 50px;
   height: 100%;
