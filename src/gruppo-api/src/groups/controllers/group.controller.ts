@@ -12,9 +12,9 @@ import {
   Res,
   UseGuards,
 } from '@nestjs/common';
-import { UsersService } from '../services/users.service';
-import { CreateUserDto } from '../dto/create-user.dto';
-import { UpdateUserDto } from '../dto/update-user.dto';
+import { UsersService } from '../services/group.service';
+import { CreateUserDto } from '../dto/create-group.dto';
+import { UpdateGroupDto } from '../dto/update-group.dto';
 import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard';
 
 @Controller('users')
@@ -31,14 +31,14 @@ export class UsersController {
     return this.usersService.findAll();
   }
 
-  @Get(':id')
+  @Get(':email')
   findOne(
     @Param(
-      'id'
+      'email'
     )
-    id: string,
+    email: string,
   ) {
-    return this.usersService.findById(id).then((user) => { 
+    return this.usersService.findByEmail(email).then((user) => { 
       if (!user) return new HttpException('User not found', HttpStatus.NOT_FOUND);
       return user; 
     });
@@ -52,7 +52,7 @@ export class UsersController {
       new ParseUUIDPipe({ errorHttpStatusCode: HttpStatus.BAD_REQUEST }),
     )
     id: string,
-    @Body() body: UpdateUserDto,
+    @Body() body: UpdateGroupDto,
     @Res() response: Response,
   ) {
     return (

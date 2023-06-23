@@ -9,7 +9,7 @@ import { AuthService } from "../../Auth/provider/service/AuthService";
 import { Text } from "../../../lib/components";
 
 
-export default function EditUserScreen() {
+export default function EditProfileScreen() {
   //@ts-ignore
   const { params: { token } } = useRoute();
   const client = AuthService.getInstance();

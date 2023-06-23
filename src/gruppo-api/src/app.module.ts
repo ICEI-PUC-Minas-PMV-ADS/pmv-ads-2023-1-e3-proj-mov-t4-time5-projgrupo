@@ -1,21 +1,26 @@
 import { Module } from '@nestjs/common';
-import { AuthModule } from './auth/auth.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { AuthModule } from './auth/auth.module';
 import { UserEntity } from './users/entities/user.entity';
+import { join } from 'path';
+// import { GroupEntity } from './groups/entities/group.entity';
 
 @Module({
   imports: [
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'swagger'),
+      serveRoot: '/',
+    }),
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
+      name: 'default',
       type: 'postgres',
-      host: new ConfigService().get('DATABASE_HOST'),
-      port: new ConfigService().get('DATABASE_PORT'),
-      username: new ConfigService().get('DATABASE_USER'),
-      password: new ConfigService().get('DATABASE_PASSWORD'),
-      database: new ConfigService().get('DATABASE_NAME'),
-      entities: [UserEntity],
+      logging: true,
       synchronize: true,
+      url: new ConfigService().get('DATABASE_URL'),
+      entities: [UserEntity],
     }),
     AuthModule,
   ],

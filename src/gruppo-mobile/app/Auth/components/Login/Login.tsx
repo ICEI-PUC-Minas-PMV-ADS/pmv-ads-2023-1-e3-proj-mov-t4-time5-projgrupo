@@ -7,7 +7,7 @@ import { Register } from '../Register/Register';
 import { ButtonsContainer, Container, FormContainer } from "./Login.style";
 
 export function Login() {
-  const { Login, user } = useAuth();
+  const { Login } = useAuth();
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -21,11 +21,13 @@ export function Login() {
       return;
     }
     setIsValid(true);
-    await Login({ email, password }).then(() => {
-      if (!user) {
-        setIsValid(false);
-        setMessage("Email ou senha incorretos.");
-      }
+    await Login({ email, password }).then((user) => {
+      setTimeout(() => {
+        if (!user) {
+          setIsValid(false);
+          setMessage("Email ou senha incorretos.");
+        }
+      }, 2000);
     });
   }
 

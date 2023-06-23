@@ -8,7 +8,7 @@ import { Profile } from './service/models/Profile';
 
 interface AuthContextData {
   user: Profile | null;
-  Login(user: LoginPayload): Promise<void>;
+  Login(user: LoginPayload): Promise<Profile>;
   Logout(): void;
 }
 
@@ -48,7 +48,7 @@ export function AuthProvider({ children }) {
     storage.remove('user');
   }
 
-  const Login = async (userData?: LoginPayload): Promise<void> => {
+  const Login = async (userData?: LoginPayload): Promise<Profile> => {
     if (!userData) {
       storage.get('token').then(async (storageToken) => {
         if (storageToken && storageToken !== 'undefined') {
@@ -57,7 +57,7 @@ export function AuthProvider({ children }) {
               setToken(storageToken);
               setUser(data);
               storage.set('user', JSON.stringify(data));
-            }
+            }            
           });
         }
       });
@@ -76,6 +76,7 @@ export function AuthProvider({ children }) {
         }
       });
     }
+    return user;
   }
 
   return (

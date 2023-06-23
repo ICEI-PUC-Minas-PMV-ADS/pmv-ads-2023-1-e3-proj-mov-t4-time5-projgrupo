@@ -26,18 +26,29 @@ export function Register({ close, email = '', password = '', ...props }: Registe
   const [message, setMessage] = useState<string>('')
 
   const handleSignup = async () => {
-    if (firstName && lastName && emailInput && passwordInput && confirmedPassword) setMessage("")
-
-    try {
-      const response = await client.postSignup({ firstName, lastName, email: emailInput, password: passwordInput })
-      if (response.status === 201) {
-        Login({ email: emailInput, password: passwordInput });
+    if (firstName && lastName && emailInput && passwordInput && confirmedPassword) {
+      const isValid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(emailInput)
+      if (!isValid) {
+        setMessage('Por favor, insira um email válido.')
+        setInvalid(true)
       } else {
-        setMessage(response.data.message)
+        setInvalid(false)
+        setMessage('')
       }
-    } catch (e: any) {
-      setMessage('Email já cadastrado. Você esqueceu sua senha?')
     }
+    else {
+      setMessage("Por favor, preencha todos os campos.")
+      return;
+    }
+    await client.postSignup({ firstName, lastName, email: emailInput, password: passwordInput }).then(async (res) => {
+      if (res.status === 201) {
+        await Login({ email: emailInput, password: passwordInput });
+      } else {
+        setMessage(res.data.message)
+      }
+    }).catch((err) => {
+      setMessage('Email já cadastrado. Você esqueceu sua senha?')
+    });
   }
 
   useEffect(() => {
@@ -45,8 +56,13 @@ export function Register({ close, email = '', password = '', ...props }: Registe
   }, [user])
 
   useEffect(() => {
-    if (!firstName || !lastName || !emailInput || !passwordInput || !confirmedPassword) setMessage("Por favor, preencha todos os campos.")
-    else {
+    if (firstName.length > 0
+      && lastName.length > 0
+      && emailInput.length > 0
+      && passwordInput.length > 0
+      && confirmedPassword.length > 0
+      && (passwordInput === confirmedPassword)
+    ) {
       const isValid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(emailInput)
       if (!isValid) {
         setMessage('Por favor, insira um email válido.')
@@ -56,7 +72,6 @@ export function Register({ close, email = '', password = '', ...props }: Registe
       }
     }
   }, [firstName, lastName, emailInput, passwordInput, confirmedPassword])
-
 
   return (
     <Modal {...props} onRequestClose={close} transparent>
