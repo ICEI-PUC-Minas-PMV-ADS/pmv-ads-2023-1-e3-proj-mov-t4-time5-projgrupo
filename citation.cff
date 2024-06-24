@@ -1,0 +1,18 @@
+message: Please cite this software using these metadata.
+title: PucBanking
+authors:
+  - family-names: Sellas
+    given-names: Bruno
+  - family-names: Shinaede
+    given-names: Raul
+  - family-names: Felix Santiago
+    given-names: Marco Túlio
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Felipe Alves de Oliveira 
+    given-names: Pedro 
+keywords:
+  - Serviços Bancários
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-puc-banking
+version: 1.0.0
+date-released: 2023-08-01
