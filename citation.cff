@@ -1,6 +1,10 @@
-message: Please cite this software using these metadata.
-title: PucBanking
+message: Aplicativo de gestão de equipes para trabalhos acadêmicos.
+title: Gruppo
 authors:
+  - family-names: Stiebler Carneiro da Silva
+    given-names: Aaron
+  - family-names: José Silva Ferreira
+    given-names: Iago
   - family-names: Sellas
     given-names: Bruno
   - family-names: Shinaede
@@ -9,10 +13,10 @@ authors:
     given-names: Marco Túlio
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Felipe Alves de Oliveira 
-    given-names: Pedro 
+    family-names: Curcino de Lima
+    given-names: Mateus 
 keywords:
-  - Serviços Bancários
-repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t6-puc-banking
+  - Gestão de equipes
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t4-time5-projgrupo
 version: 1.0.0
-date-released: 2023-08-01
+date-released: 2023-06-23
