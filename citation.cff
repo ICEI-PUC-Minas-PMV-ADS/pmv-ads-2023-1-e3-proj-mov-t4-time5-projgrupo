@@ -1,0 +1,22 @@
+message: Aplicativo de gestão de equipes para trabalhos acadêmicos.
+title: Gruppo
+authors:
+  - family-names: Stiebler Carneiro da Silva
+    given-names: Aaron
+  - family-names: José Silva Ferreira
+    given-names: Iago
+  - family-names: Sellas
+    given-names: Bruno
+  - family-names: Shinaede
+    given-names: Raul
+  - family-names: Felix Santiago
+    given-names: Marco Túlio
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Curcino de Lima
+    given-names: Mateus 
+keywords:
+  - Gestão de equipes
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t4-time5-projgrupo
+version: 1.0.0
+date-released: 2023-06-23
